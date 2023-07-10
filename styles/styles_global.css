@@ -25,6 +25,15 @@ html {
     color: white;
     font-size: large;
     text-decoration: none;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left:inherit;
+    padding-right:inherit;
+}
+
+#toggle {
+    width: 50px;
+    height: auto;
+}
+
+#outside-navbar {
+    display: flex;
 }

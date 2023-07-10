@@ -1,0 +1,14 @@
+.title {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: "Bangers";
+    letter-spacing: 5px;
+    display: flex;
+    font-size: 48pt;
+    justify-content: center;
+}
+
+.title img {
+    width: 75%;
+    height: auto;
+}

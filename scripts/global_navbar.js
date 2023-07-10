@@ -1,7 +1,21 @@
+var currnetPage = "home";
+
 setPage = page => {
+    currnetPage = page;
     document.getElementById(page).style.setProperty("background-color", "#bff000");
     document.getElementById(page).style.setProperty("color", "black");
-    // document.getElementById(page).style.setProperty("border-radius", "50px");
+}
+
+highlightLink = page => {
+    if (currnetPage != page) {
+        document.getElementById(page).style.setProperty("background-color", "red");
+    }
+}
+
+resetHighlighting = page => {
+    if (currnetPage != page) {
+        document.getElementById(page).style.setProperty("background-color", "black");
+    }
 }
 
 setPage(new URLSearchParams(window.location.search).get("page"));

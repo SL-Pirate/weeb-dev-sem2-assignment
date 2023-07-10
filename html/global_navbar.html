@@ -12,15 +12,29 @@
         <!-- Navbar -->
         <nav id="global-navbar">
             <ul>
-                <a id="home" href="home.html"><li><strong>Home</strong></li></a>
-                <a href="tmp.html" id="comments"><li><strong>Comments</strong></li></a>
-                <a href="#" id="shop"><li><strong>Shop</strong></li></a>
-                <a href="#" id="quiz"><li><strong>Quiz</strong></li></a>
-                <a href="#" id="sitemap"><li><strong>Site Map</strong></li></a>
-                <a href="#" id="about-us"><li><strong>About us</strong></li></a>
+                <a id="home" href="home.html" onmouseenter="highlightLink('home')" onmouseleave="resetHighlighting('home')">
+                    <li><strong>Home</strong></li>
+                </a>
+                <a href="tmp.html" id="comments" onmouseenter="highlightLink('comments')" onmouseleave="resetHighlighting('comments')">
+                    <li><strong>Comments</strong></li>
+                </a>
+                <a href="#" id="shop" onmouseenter="highlightLink('shop')" onmouseleave="resetHighlighting('shop')">
+                    <li><strong>Shop</strong></li>
+                </a>
+                <a href="#" id="quiz" onmouseenter="highlightLink('quiz')" onmouseleave="resetHighlighting('quiz')">
+                    <li><strong>Quiz</strong></li>
+                </a>
+                <a href="#" id="sitemap" onmouseenter="highlightLink('sitemap')" onmouseleave="resetHighlighting('sitemap')">
+                    <li><strong>Site Map</strong></li>
+                </a>
+                <a href="#" id="about-us" onmouseenter="highlightLink('about-us')" onmouseleave="resetHighlighting('about-us')">
+                    <li><strong>About us</strong></li>
+                </a>
+                <!-- <button onclick="toggleMode();"><img alt="toggle mode" src="../gfx/toggle.png" id="toggle"></button> -->
             </ul>
         </nav>
 
         <script src="../scripts/global_navbar.js"></script>
+        <script src="../scripts/night_mode.js"></script>
     </body>
 </html>
