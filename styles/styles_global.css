@@ -4,20 +4,22 @@ html {
 
 
 /* Styling for the global navigation bar */
-nav {
+#global-navbar {
     background-color: black;
+    border-radius: 25px;
 }
 
-nav ul {
+#global-navbar ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    padding-left: 0px;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px;
     margin-top: 0px;
 }
 
 
-nav ul a {
+#global-navbar ul a {
     padding-top: 25px;
     padding-bottom: 25px;
     color: white;

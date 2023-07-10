@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link href="../styles/styles_global.css" rel="stylesheet">
-    <!-- Making te iframe open links in the parent window. Reference: https://stackoverflow.com/questions/1037839/how-to-force-link-from-iframe-to-be-opened-in-the-parent-window-->
-    <base target="_parent">
-</head>
-<body>
-    <!-- Navbar -->
-    <nav>
-        <ul>
-            <a href="home.html"><li><strong>Home</strong></li></a>
-            <a href="#"><li><strong>Comments</strong></li></a>
-            <a href="#"><li><strong>Shop</strong></li></a>
-            <a href="#"><li><strong>Quiz</strong></li></a>
-            <a href="#"><li><strong>Site Map</strong></li></a>
-            <a href="#"><li><strong>About us</strong></li></a>
-        </ul>
-    </nav>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link href="../styles/styles_global.css" rel="stylesheet">
+        <!-- Making te iframe open links in the parent window. Reference: https://stackoverflow.com/questions/1037839/how-to-force-link-from-iframe-to-be-opened-in-the-parent-window-->
+        <base target="_parent">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav id="global-navbar">
+            <ul>
+                <a id="home" href="home.html"><li><strong>Home</strong></li></a>
+                <a href="tmp.html" id="comments"><li><strong>Comments</strong></li></a>
+                <a href="#" id="shop"><li><strong>Shop</strong></li></a>
+                <a href="#" id="quiz"><li><strong>Quiz</strong></li></a>
+                <a href="#" id="sitemap"><li><strong>Site Map</strong></li></a>
+                <a href="#" id="about-us"><li><strong>About us</strong></li></a>
+            </ul>
+        </nav>
+
+        <script src="../scripts/global_navbar.js"></script>
+    </body>
 </html>
