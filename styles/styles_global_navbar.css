@@ -2,19 +2,22 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body, html{
+    margin: 0px;
+}
 
 /* Styling for the global navigation bar */
 #global-navbar {
     background-color: black;
-    border-radius: 25px;
+    width:auto;
 }
 
 #global-navbar ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 0%;
+    padding-right: 0%;
     margin-top: 0px;
 }
 
@@ -25,10 +28,17 @@ html {
     color: white;
     font-size: large;
     text-decoration: none;
-    padding-left:inherit;
-    padding-right:inherit;
+    width: 16.66%;
+    justify-content: center;
+    display: flex;
 }
 
+#global-navbar ul a li {
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+
+/* 
 #toggle {
     width: 50px;
     height: auto;
@@ -36,4 +46,4 @@ html {
 
 #outside-navbar {
     display: flex;
-}
+} */
