@@ -47,3 +47,11 @@ function addProducts(){
     })
 }
 addProducts();
+// -------------- Open and Close Shopping Cart ----------------
+function showcart() {
+	document.querySelector('.cart-container-show').style.display = 'block';
+}
+
+function hidecart() {
+	document.querySelector('.cart-container-show').style.display = 'none';
+}
