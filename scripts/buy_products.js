@@ -25,6 +25,21 @@ let Products = [
     name:"Bronze Samadhi Statue - Abayagiriya",
     price:3500.00,
     image:"Buddha_Statue.PNG"
+},
+{
+    name:"Sri Lankan Handmade Wooden Elephant",
+    price:3500.00,
+    image:"Wooden-Elephant.jpg"
+},
+{
+    name:"Batik Shirt - Long Sleeves",
+    price:2500.00,
+    image:"Batik-Shirt-long-sleeves.jpg"
+},
+{
+    name:"Brass Carved Hanging Oil Lamp",
+    price:900.00,
+    image: "Brass-Hanging-OilLamp.jpg"
 }
 ]
 
@@ -47,3 +62,11 @@ function addProducts(){
     })
 }
 addProducts();
+// -------------- Open and Close Shopping Cart ----------------
+function showcart() {
+	document.querySelector('.cart-container-show').style.display = 'block';
+}
+
+function hidecart() {
+	document.querySelector('.cart-container-show').style.display = 'none';
+}
