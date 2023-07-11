@@ -34,7 +34,7 @@ function addProducts(){
         newDiv.classList.add('product-items');
         newDiv.innerHTML = `
         <div class="product-items-image">
-            <img  src="images/${value.image}">
+            <img  src="../gfx/${value.image}">
             <h4 class="product-item-price">Rs. ${value.price.toLocaleString()} </h4>
         </div>
         <div class="product-item-namecard">
