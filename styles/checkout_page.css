@@ -1,0 +1,69 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.Personal-Details{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items:center;
+    background-color: rgba(114, 109, 109, 0.534);
+    border-radius:20px ;
+    width: 1000px;
+    transition: all 2s;
+
+}
+
+.Personal-Details-form{
+    width: 80%;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: all 2s;
+}
+.Personal-Details-form-show{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: all 2s;
+}
+
+.Personal-Details-Title h1{
+    font-family:'Belanosima', sans-serif ;
+}
+
+ fieldset{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+    border: none;
+}
+.Personal-Details-form .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2  - 20px)
+}
+
+.Personal-Details-form .details{
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-weight: bolder;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.Personal-Details-form .input-box input{
+    height: 40px;
+    width: 80%;
+    outline: none;
+    border-radius: 5px;
+    /*border: 1px solid #ccc;*/
+    background: #00000059;
+    border:0px;
+    border-bottom: 2px solid #ccc;
+    padding-left: 15px;
+    font-size: 13px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
