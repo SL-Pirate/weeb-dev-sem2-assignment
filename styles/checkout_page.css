@@ -3,34 +3,34 @@ body{
     justify-content: center;
 }
 
-.Personal-Details{
+.Personal-Details,.Shipping-Details{
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items:center;
-    background-color: rgba(114, 109, 109, 0.534);
+    background-color: rgba(235, 235, 235, 0.932);
+    filter: drop-shadow(0px 0px 2px #15081fea);
     border-radius:20px ;
     width: 1000px;
-    transition: all 2s;
+    transition: display 2s;
 
 }
 
-.Personal-Details-form{
-    width: 80%;
-    display: none;
-    flex-wrap: wrap;
-    justify-content: center;
-    transition: all 2s;
+.Personal-Details{
+    margin-bottom: 20px;
 }
-.Personal-Details-form-show{
+
+.Personal-Details-form,.Shipping-Details-form{
     width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    transition: all 2s;
+    transition: display 2s;
 }
 
-.Personal-Details-Title h1{
+h1{
+    cursor: pointer;
+    font-size: 25px;
     font-family:'Belanosima', sans-serif ;
 }
 
@@ -41,24 +41,32 @@ body{
     margin: 20px 0 12px 0;
     border: none;
 }
-.Personal-Details-form .input-box{
+.input-box{
     margin-bottom: 15px;
     width: calc(100% / 2  - 20px)
 }
 
-.Personal-Details-form .details{
+::placeholder{
+    color: antiquewhite;
+}
+
+.Shipping-Details-form .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.details{
     display: block;
-    font-family: 'Inter', sans-serif;
+    font-family: sans-serif;
     font-weight: bolder;
     font-weight: 500;
     margin-bottom: 5px;
 }
-.Personal-Details-form .input-box input{
+.input-box input{
     height: 40px;
     width: 80%;
     outline: none;
     border-radius: 5px;
-    /*border: 1px solid #ccc;*/
     background: #00000059;
     border:0px;
     border-bottom: 2px solid #ccc;
@@ -66,4 +74,19 @@ body{
     font-size: 13px;
     border-bottom-width: 2px;
     transition: all 0.3s ease;
+}
+
+.input-box input:focus{
+    background: #c0c0c059;
+    border: 2px solid #4e4e4e;
+    transition: all 0.3s ease;
+}
+.Shipping-Details ,.Personal-Details{
+    position: relative;
+}
+.drop-down-arrow{
+    position: absolute;
+    transform:rotate(179deg);
+    right: 2px;
+    top:0;
 }

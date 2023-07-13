@@ -4,6 +4,10 @@ let cartIconCount= document.querySelector('.quantity');
 let cartTotal;
 let cartList= [];
 
+//-------------- Passing Data -----------------------------
+let OrederProducts = [];
+let FinalTotal ;
+
 let Products = [
     {
         name:"Mayura Raksha - Traditional Sri Lankan Mask",
@@ -109,7 +113,7 @@ function addToCartView(){
                 <h3>Rs. ${(Products[value].quantity*Products[value].price).toLocaleString()}</h3>
             </div>
             <div class="cart-item-remove">
-                <img src="../gfx/closs_btn.png" onclick="removeFromCart(${key})">
+                <img src="../gfx/closs_btn.png" onclick="removeFromCart(${key},${value})">
             </div>
         `;
         Cart_item_container.appendChild(newCartItem);
@@ -118,8 +122,9 @@ function addToCartView(){
     cartTotalPrice()
 }
 
-function removeFromCart(key){
+function removeFromCart(key,value){
     cartList.splice(key,1);
+    Products[value].quantity = 0;
     refreshCartIcon();
     addToCartView();
 }
@@ -127,6 +132,7 @@ function removeFromCart(key){
 
 function cartTotalPrice(){
     cartTotal = 0;
+    document.querySelector('.cart-total-price').innerText = "Rs. 00.00";
     cartList.forEach((value,key) =>{
         let quantity = Products[value].quantity;
         let price = Products[value].price;
@@ -157,4 +163,19 @@ function showcart() {
 
 function hidecart() {
 	document.querySelector('.cart-container-show').style.display = 'none';
+}
+
+//----------------- Open Checkout Page -------------------------
+
+function submit(){
+    OrederProducts = [];
+    if(cartTotal != 0){
+        FinalTotal = cartTotal;
+        cartList.forEach((value,key) =>{
+            OrederProducts.push(Products[value]);
+        })
+        window.open('../html/checkout_page.html');
+    }
+    
+    
 }

@@ -12,9 +12,10 @@
             <form>
                 <div class="Personal-Details">
                     <div class="Personal-Details-Title" >
-                        <h1 onclick="display()">Personal Details</h1>
+                        <h1 onclick="displayPersonalForm()">Personal Details</h1>
+                        <img src="../gfx/drop_down_arrow.png" alt="drop down" class="drop-down-arrow" id="drop-down-arrow-one" onclick="displayPersonalForm()">
                     </div>
-                    <div class="Personal-Details-form" id="Personal-Details-form">
+                    <div class="Personal-Details-form">
                         <fieldset>
                             <div class="input-box">
                                 <span class="details" for="#first-name">First Name</span>
@@ -35,8 +36,35 @@
                         </fieldset>
                     </div>
                 </div>
+                <div class="Shipping-Details">
+                    <div class="Shipping-Details-Title" >
+                        <h1 onclick="displayShippingForm()">Shipping Details</h1>
+                        <img src="../gfx/drop_down_arrow.png" alt="drop down" class="drop-down-arrow" id="drop-down-arrow-two" onclick="displayShippingForm()">
+                    </div>
+                    <div class="Shipping-Details-form">
+                        <fieldset>
+                            <div class="input-box">
+                                <span class="details" for="#address">Address</span>
+                                <input id="address" type="text" placeholder="Enter Address" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details" for="#town">Town/City</span>
+                                <input id="town" type="text" placeholder="Enter Town or City" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details" for="#postal">Postal Code</span>
+                                <input id="postal" type="text" placeholder="Enter Postal Code" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details" for="#country">Country</span>
+                                <input id="country" type="textbox" placeholder="Enter Country" required>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                
             </form>
         </div> 
-        <script src="../scripts/checkout_page.js"></script>  
+        <script src="../scripts/checkout_page.js"></script> 
     </body>
 </html>
