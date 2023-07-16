@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../gfx/favicon.png">
+    <title>Comments</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/comments.css">
+    <script src="../scripts/comments.js"></script>
+</head>
+<body>
+    <iframe src="global_navbar.html?page=comments" width="100%" height="100px" style="border:none;"></iframe>
+    <form>
+        <div id="satisfaction-range-outer-div">
+            <label>How satisfied are you with our webstie? Choose from 1 to 10 where 1 is dissatisfied and 10 is highly satisfied</label>
+            <label id="rate-required">This field is required</label>
+            <div id="satisfaction-range-inner-div">
+                <div class="satisfaction-range">
+                    <label>1</label>
+                    <input type="radio" name="satisfaction-value" value="1">
+                </div>
+                <div class="satisfaction-range">
+                    <label>2</label>
+                    <input type="radio" name="satisfaction-value" value="2">
+                </div>
+                <div class="satisfaction-range">
+                    <label>3</label>
+                    <input type="radio" name="satisfaction-value" value="3">
+                </div>
+                <div class="satisfaction-range">
+                    <label>4</label>
+                    <input type="radio" name="satisfaction-value" value="4">
+                </div>
+                <div class="satisfaction-range">
+                    <label>5</label>
+                    <input type="radio" name="satisfaction-value" value="5">
+                </div>
+                <div class="satisfaction-range">
+                    <label>6</label>
+                    <input type="radio" name="satisfaction-value" value="6">
+                </div>
+                <div class="satisfaction-range">
+                    <label>7</label>
+                    <input type="radio" name="satisfaction-value" value="7">
+                </div>
+                <div class="satisfaction-range">
+                    <label>8</label>
+                    <input type="radio" name="satisfaction-value" value="8">
+                </div>
+                <div class="satisfaction-range">
+                    <label>9</label>
+                    <input type="radio" name="satisfaction-value" value="9">
+                </div>
+                <div class="satisfaction-range">
+                    <label>10</label>
+                    <input type="radio" name="satisfaction-value" value="10">
+                </div>
+            </div>
+        </div>
+        <div id="tell-more">
+            <label>Please tell us more</label>
+            <label id="tellmore-required">This field is required</label>
+            <textarea id="tellmore-text"></textarea>
+        </div>
+        <div class="how-dropdown">
+            <label>How did you want to complete this task today? (Optional)</label>
+            <select id="task-today">
+                <option value="none">-- Please Select --</option>
+                <option value="phone">Phone</option>
+                <option value="webstite">WebSite</option>
+                <option value="webchat">WebChat</option>
+                <option value="social-media">Social Media</option>
+                <option value="email">Email</option>
+            </select>
+        </div>
+        <div class="how-dropdown">
+            <label>If you had to complete this task again, how would you prefer to do it? (Optional)</label>
+            <select id="task-again">
+                <option value="none">-- Please Select --</option>
+                <option value="phone">Phone</option>
+                <option value="webstite">WebSite</option>
+                <option value="webchat">WebChat</option>
+                <option value="social-media">Social Media</option>
+                <option value="email">Email</option>
+            </select>
+        </div>
+        <div id="submit">
+            <input type="button" name="submit" value="Submit" onclick="sendMail(null, null, null, null)">
+        </div>
+    </form>
+</body>
+</html>
