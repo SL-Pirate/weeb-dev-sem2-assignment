@@ -82,5 +82,6 @@ function sendMail () {
         let email = "mailto:" + emailAddr + "?subject=" + subject + "&body=" + body;
         console.log(email);
         window.open(email, '_blank');
+        window.open("thankyou_comments.html", '_parent');
     }
 }
