@@ -46,33 +46,40 @@ function sendMail () {
     const moreDetails = getMoreDetails();
     const taskToday = getTaskValueById("task-today");
     const taskAgain = getTaskValueById("task-again");
+    const newLine = "%0D%0A";
 
     if (validateNotNull(rating, "rate-required") 
     & validateNotNull(moreDetails, "tellmore-required")) {
         const emailAddr = "isira.20223184@iit.ac.lk";
         const subject = "Feedback for Travel Sri Lanka website";
         let body = 
-            "Hello Isira,\n" +
+            "Hello Isira," +
+            newLine +
+            newLine +
             "I rate my experience with your site " + 
             rating +
-            "/10\n" +
+            "/10." +
+            newLine +
             moreDetails +
-            "\n";
+            "." +
+            newLine;
 
         if (taskToday != null) {
             body += "I used " +
             taskToday + 
-            " to complete this task.\n"
+            " to complete this task." +
+            newLine;
         }
         if (taskAgain != null) {
             body += "I will be using " +
             taskAgain + 
-            " to complete this task when I do again\n"
+            " to complete this task when I do again." +
+            newLine;
         }
 
         body += "Thank you for creating and maintaining this site!";
 
-        let email = "mailto:" + emailAddr + "?subject='" + subject + "'&body='" + body + "'";
+        let email = "mailto:" + emailAddr + "?subject=" + subject + "&body=" + body;
         console.log(email);
         window.open(email, '_blank');
     }
