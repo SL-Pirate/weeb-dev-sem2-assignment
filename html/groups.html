@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="icon" href="../gfx/favicon.png">
+  <link rel="stylesheet" href="../styles/global.css">
   <style>
-    
     .details {
       margin-top: 20px;
-  
-   
     }
     ul.li {
      display: inline;
@@ -27,18 +26,19 @@
   </script>
 </head>
 <body>
+  <iframe src="global_navbar.html?page=about-us" width="100%" height="100px" style="border:none;"></iframe>
   <ul>
   <li class="member" onmouseover="displayDetails('John Doe', 'Student 1')" onmouseout="clearDetails()">
-    <img src="john.jpg" alt="John Doe">
+    <img src="../gfx/Ben.jpg" alt="John Doe">
   </li>
   <li class="member" onmouseover="displayDetails('Jane Smith', 'Student 2')" onmouseout="clearDetails()">
-    <img src="jane.jpg" alt="Jane Smith">
+    <img src="../gfx/jane.jpg" alt="Jane Smith">
   </li>
   <li class="member" onmouseover="displayDetails('Michael Johnson', 'Student 3')" onmouseout="clearDetails()">
-    <img src="michael.jpg" alt="Michael Johnson">
+    <img src="../gfx/Michael.jpg" alt="Michael Johnson">
   </li>
   <li class="member" onmouseover="displayDetails('Sarah Williams', 'Student 4')" onmouseout="clearDetails()">
-    <img src="sarah.jpg" alt="Sarah Williams">
+    <img src="../gfx/sarah.jpg" alt="Sarah Williams">
   </li>
   <div id="details" class="details"></div>
   </ul>

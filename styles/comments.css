@@ -78,6 +78,7 @@
 #thanking {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -88,9 +89,7 @@
 }
 
 #thanking button {
-    /* width: 100px; */
-    margin-left: 40%;
-    margin-right: 40%;
+    width: 100px;
     padding: 15px;
     background: #bfff00;
     border: none;
