@@ -1,0 +1,13 @@
+#outer-div {
+    margin: 50px;
+    text-align: center;
+}
+
+.entry {
+    margin-bottom: 50px;
+    border-style: solid;
+}
+
+.entry a {
+    margin-bottom: 50px;
+}
