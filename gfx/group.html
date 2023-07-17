@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    
+    .details {
+      margin-top: 20px;
+  
+   
+    }
+    ul.li {
+     display: inline;
+     padding: 2px;
+    }
+    .member img{
+      width: 20%;
+      height: 20%;
+    }
+  </style>
+  <script>
+    function displayDetails(name, role) {
+      document.getElementById('details').innerHTML = name + ', ' + role;
+    }
+    function clearDetails() {
+      document.getElementById('details').innerHTML = '';
+    }
+  </script>
+</head>
+<body>
+  <ul>
+  <li class="member" onmouseover="displayDetails('John Doe', 'Student 1')" onmouseout="clearDetails()">
+    <img src="john.jpg" alt="John Doe">
+  </li>
+  <li class="member" onmouseover="displayDetails('Jane Smith', 'Student 2')" onmouseout="clearDetails()">
+    <img src="jane.jpg" alt="Jane Smith">
+  </li>
+  <li class="member" onmouseover="displayDetails('Michael Johnson', 'Student 3')" onmouseout="clearDetails()">
+    <img src="michael.jpg" alt="Michael Johnson">
+  </li>
+  <li class="member" onmouseover="displayDetails('Sarah Williams', 'Student 4')" onmouseout="clearDetails()">
+    <img src="sarah.jpg" alt="Sarah Williams">
+  </li>
+  <div id="details" class="details"></div>
+  </ul>
+</body>
+</html>
