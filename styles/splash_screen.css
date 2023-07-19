@@ -1,0 +1,231 @@
+body{
+    margin: 0;
+    font-family: 'PT Sans Narrow', sans-serif
+    /* overflow: hidden; */
+}
+/* ------------------- Gallery ------------------------------ */
+.gallery-div{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(34, 34, 34);
+    width: 100vw;
+    height: 100%;
+    text-align: center;
+    animation: change-div-size ease-out 0.4s 1.8s forwards;
+    overflow: hidden;
+}
+
+.image-container-1{
+    filter: drop-shadow(0px 0px 4px #000000a9);
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 10px ;
+    width: 20%;
+    height: 90%;
+    overflow: hidden;
+    opacity: 0;
+    animation: show-cards ease-in 0.5s forwards;   
+}
+.image-container-2{
+    filter: drop-shadow(0px 0px 4px #000000d2);
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 10px ;
+    width: 18%;
+    height: 85%;
+    overflow: hidden;
+    opacity: 0;
+    animation: show-cards ease-in 0.5s 0.2s forwards;
+    
+}
+.image-container-3{
+    filter: drop-shadow(0px 0px 4px #00000098);
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 10px ;
+    width: 14%;
+    height: 80%;
+    overflow: hidden;
+    opacity: 0; 
+    animation: show-cards ease-in 0.5s 0.5s forwards;
+}
+
+.gallery-div img{
+    border-radius: 10px ;
+    width: auto;
+    height: 100%;
+    animation: change-image-size ease-out 0.3s 1.8s forwards;
+}
+
+
+.page-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgba(38, 68, 83, 0);
+    width: 100%;
+    height: 40%;
+    overflow: hidden;
+    animation: change-gif-size ease-out 0.3s 1.8s forwards;
+}
+.page-title img{
+    opacity: 50%;
+    border-radius: 0;
+    width: 100%;
+    height: auto;
+}
+@keyframes change-div-size {
+    100%{
+        height: 30%;
+    }
+}
+
+@keyframes show-cards {
+    0%{
+        transform: translateY(50%);
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes change-image-size {
+    0%{
+        width: auto;
+        height: 100%;
+    }
+
+    33%{
+        width: 110%;
+        height: auto;
+    }
+    100%{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@keyframes change-gif-size{
+    100%{
+        height: 60%;
+    }
+}
+
+/*_______________________________ Gallery ____________________________*/
+
+/*----------------------------- group details ------------------------*/
+
+.group-details{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 0%;
+    animation: group-details-expand ease-out 0.3s 2s forwards;
+    overflow: hidden;
+}
+.profile-card{
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column; */
+    filter: drop-shadow(0px 0px 4px #00000098);
+    background-color: rgb(44, 44, 44);
+    padding: 40px 0 0 0;
+    width: 10%;
+    height: 85%;
+    border-radius: 20px;
+    animation: profile-show-cards ease-out 0.3s 2s forwards;
+}
+.profile-img{
+    background-color: aquamarine;
+    margin: auto;
+    width: 80%;
+    height: 95%;
+    border-radius: 50%;
+    animation: profile-image-expand ease-out 0.3s 2s forwards;
+    overflow: hidden;
+}
+.profile-img img{
+    width: 100%;
+    height: auto;
+    
+}
+.profile-details{
+    text-align: center;
+}
+.profile-details h2{
+    color: aliceblue;
+}
+.profile-details p{
+    color: aliceblue;
+}
+
+@keyframes group-details-expand {
+    100%{
+        height: 70%;
+    }
+}
+
+@keyframes profile-show-cards {
+    100%{
+        width: 20%;
+    }
+}
+
+@keyframes profile-image-expand {
+    100%{
+        width: 75%;
+        height: 50%;
+    }
+}
+
+/*______________________ group details ____________________________*/
+/*---------------------- closing slides ---------------------------*/
+
+.closing-slids{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.slids{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+#first-slid{
+    background-color:  rgb(44, 44, 44);
+    opacity: 0;
+    animation: closing ease-in-out 0.5s 3.2s forwards;
+}
+#second-slid{
+    background-color:  rgb(254, 254, 254);
+    opacity: 0;
+    animation: closing ease-in-out 0.5s 3.4s forwards;
+}
+#third-slid{
+    background-color:  rgb(44, 44, 44);
+    opacity: 0;
+    animation: closing ease-in-out 0.4s 3.6s forwards;
+}
+
+@keyframes closing {
+    0%{
+        transform: translateX(100%);
+        opacity: 100%;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
