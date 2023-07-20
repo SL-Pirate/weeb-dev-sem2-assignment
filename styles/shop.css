@@ -296,3 +296,109 @@
     width: 20px;
     cursor: pointer;
 }
+
+/*----------------------- checkout popup ------------------------*/
+
+.checkout_popup{
+    background-color: aliceblue;
+    display: none;
+    justify-content: center;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+}
+.form-container{
+    overflow:auto;
+    padding-bottom: 20%;
+}
+
+.checkout_popup .Personal-Details,.Shipping-Details{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items:center;
+    background-color: rgba(235, 235, 235, 0.932);
+    filter: drop-shadow(0px 0px 2px #15081fea);
+    border-radius:20px ;
+    width: 1000px;
+    margin: 10px;
+    transition: display 2s;
+
+}
+
+.Personal-Details{
+    margin-bottom: 20px;
+}
+
+.checkout_popup .Personal-Details-form,.Shipping-Details-form{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: display 2s;
+}
+
+.checkout_popup h1{
+    cursor: pointer;
+    font-size: 25px;
+    font-family:'Belanosima', sans-serif ;
+}
+
+.checkout_popup fieldset{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+    border: none;
+}
+.checkout_popup .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2  - 20px)
+}
+
+.checkout_popup input::placeholder{
+    color: antiquewhite;
+}
+
+.checkout_popup .Shipping-Details-form .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.checkout_popup .details{
+    display: block;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.checkout_popup .input-box input{
+    height: 40px;
+    width: 80%;
+    outline: none;
+    border-radius: 5px;
+    background: #00000059;
+    border:0px;
+    border-bottom: 2px solid #ccc;
+    padding-left: 15px;
+    font-size: 13px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.checkout_popup .input-box input:focus{
+    background: #c0c0c059;
+    border: 2px solid #4e4e4e;
+    transition: all 0.3s ease;
+}
+.checkout_popup .Shipping-Details ,.Personal-Details{
+    position: relative;
+}
+.checkout_popup .drop-down-arrow{
+    position: absolute;
+    transform:rotate(179deg);
+    right: 2px;
+    top:0;
+}

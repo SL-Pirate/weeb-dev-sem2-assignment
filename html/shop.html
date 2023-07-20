@@ -37,7 +37,71 @@
                 </div>
             </div>
         </div>
+        
+        <div class="checkout_popup">
+            <div class="form-container">
+                <div class="checkout-order-details">
+                    <h1 class="checkout-title">Order Summery</h1>
+                    <h2 class="checkout-total"></h2>
+                    <h2 class="payment-method">Payment-Method :- Cash on Delivery</h2>
+                </div>
+                <form>
+                    <div class="Personal-Details">
+                        <div class="Personal-Details-Title" >
+                            <h1 onclick="displayPersonalForm()">Personal Details</h1>
+                            <img src="../gfx/drop_down_arrow.png" alt="drop down" class="drop-down-arrow" id="drop-down-arrow-one" onclick="displayPersonalForm()">
+                        </div>
+                        <div class="Personal-Details-form">
+                            <fieldset>
+                                <div class="input-box">
+                                    <span class="details" for="#first-name">First Name</span>
+                                    <input id="first-name" type="text" placeholder="Enter Your First Name" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details" for="#last-name">Last Name</span>
+                                    <input id="last-name" type="text" placeholder="Enter Your Last Name" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details" for="#tel">Phone Number</span>
+                                    <input id="tel" type="text" placeholder="Enter Your Phone Name" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details" for="#email">Email</span>
+                                    <input id="email" type="mail" placeholder="Enter Your Email Address" required>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="Shipping-Details">
+                        <div class="Shipping-Details-Title" >
+                            <h1 onclick="displayShippingForm()">Shipping Details</h1>
+                            <img src="../gfx/drop_down_arrow.png" alt="drop down" class="drop-down-arrow" id="drop-down-arrow-two" onclick="displayShippingForm()">
+                        </div>
+                        <div class="Shipping-Details-form">
+                            <fieldset>
+                                <div class="input-box">
+                                    <span class="details" for="#address">Address</span>
+                                    <input id="address" type="text" placeholder="Enter Address" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details" for="#town">Town/City</span>
+                                    <input id="town" type="text" placeholder="Enter Town or City" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details" for="#postal">Postal Code</span>
+                                    <input id="postal" type="text" placeholder="Enter Postal Code" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="details" for="#country">Country</span>
+                                    <input id="country" type="textbox" placeholder="Enter Country" required>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div> 
+        </div>
         <script src="../scripts/shop.js"></script>
-
     </body>
 </html>

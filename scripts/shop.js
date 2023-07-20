@@ -1,7 +1,7 @@
 let Product_container = document.querySelector('.product-container');
 let Cart_item_container = document.querySelector('.cart-items-div');
 let cartIconCount= document.querySelector('.quantity');
-let cartTotal;
+let cartTotal = 0;
 let cartList= [];
 
 //-------------- Passing Data -----------------------------
@@ -165,17 +165,41 @@ function hidecart() {
 	document.querySelector('.cart-container-show').style.display = 'none';
 }
 
-//----------------- Open Checkout Page -------------------------
+//----------------- Open Checkout Popup -------------------------
 
 function submit(){
-    OrederProducts = [];
     if(cartTotal != 0){
-        FinalTotal = cartTotal;
-        cartList.forEach((value,key) =>{
-            OrederProducts.push(Products[value]);
-        })
-        window.open('../html/checkout_page.html');
-    }
-    
-    
+        document.querySelector('.product-container').style.display = 'none'
+        document.querySelector('.cart-container-show').style.display = 'none';
+        document.querySelector('.checkout_popup').style.display = 'flex';
+        document.querySelector('.checkout-total').innerText = "Total Payment :- Rs." + cartTotal.toLocaleString();
+    }   
+}
+
+//---------------- Checkout Popup ------------------------------
+
+let personalFormDetails = document.querySelector('.Personal-Details-form');
+let shippingFormDetails = document.querySelector('.Shipping-Details-form');
+let dropArrowone = document.querySelector('#drop-down-arrow-one');
+let dropArrowtwo = document.querySelector('#drop-down-arrow-two');
+
+function displayPersonalForm(){
+    if(personalFormDetails.style.display =='none'){
+        dropArrowone.style.transform = 'rotate(180deg)';
+        personalFormDetails.style.display = 'flex';
+    }else{
+        dropArrowone.style.transform = 'rotate(0deg)';
+        personalFormDetails.style.display = 'none';
+    }  
+}
+
+function displayShippingForm(){
+    if(shippingFormDetails.style.display =='none'){
+        dropArrowtwo.style.transform = 'rotate(180deg)';
+        shippingFormDetails.style.display = 'flex';
+
+    }else{
+        dropArrowtwo.style.transform = 'rotate(0deg)';
+        shippingFormDetails.style.display = 'none';
+    }  
 }
