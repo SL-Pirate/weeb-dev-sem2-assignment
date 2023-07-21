@@ -1,4 +1,5 @@
 body{
+    background-image: url(../gfx/sitemap_background.jpg);
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -34,7 +35,6 @@ h1{
 
 .main{
     padding-top: 7vh;
-    background-image: url(../gfx/3558308\ \(1\).jpg);
     background-size: contain;
     background-repeat: no-repeat;
 }
