@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="../gfx/favicon.png">
+  <link rel="stylesheet" href="../styles/global.css">
+  <style>
+    .details {
+      margin-top: 20px;
+    }
+    ul.li {
+     display: inline;
+     padding: 2px;
+    }
+    .member img{
+      width: 20%;
+      height: 20%;
+    }
+  </style>
+  <script>
+    function displayDetails(name, role) {
+      document.getElementById('details').innerHTML = name + ', ' + role;
+    }
+    function clearDetails() {
+      document.getElementById('details').innerHTML = '';
+    }
+  </script>
+</head>
+<body>
+  <iframe src="global_navbar.html?page=about-us" width="100%" height="100px" style="border:none;"></iframe>
+  <ul>
+  <li class="member" onmouseover="displayDetails('John Doe', 'Student 1')" onmouseout="clearDetails()">
+    <img src="../gfx/Ben.jpg" alt="John Doe">
+  </li>
+  <li class="member" onmouseover="displayDetails('Jane Smith', 'Student 2')" onmouseout="clearDetails()">
+    <img src="../gfx/jane.jpg" alt="Jane Smith">
+  </li>
+  <li class="member" onmouseover="displayDetails('Michael Johnson', 'Student 3')" onmouseout="clearDetails()">
+    <img src="../gfx/Michael.jpg" alt="Michael Johnson">
+  </li>
+  <li class="member" onmouseover="displayDetails('Sarah Williams', 'Student 4')" onmouseout="clearDetails()">
+    <img src="../gfx/sarah.jpg" alt="Sarah Williams">
+  </li>
+  <div id="details" class="details"></div>
+  </ul>
+</body>
+</html>
