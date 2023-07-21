@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="icon" href="../gfx/favicon.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers">
-    <link rel="stylesheet" href="../styles/home.css">
-</head>
-<body>
-    <iframe src="global_navbar.html?page=home" width="100%" style="border:none;"></iframe>
-    <div class="title">
-        <h1>Travel Sri Lanka</h1>
-        <img src="../gfx/map.jpg" alt="Sri Lankan Tourist map">
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="icon" href="../gfx/favicon.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers">
+        <link rel="stylesheet" href="../styles/home.css">
+        <link rel="stylesheet" href="../styles/global.css">
+    </head>
+    <body>
+        <iframe src="global_navbar.html?page=home" width="100%" height="100px" style="border:none;"></iframe>
+        <div class="title">
+            <h1>Travel Sri Lanka</h1>
+            <img src="../gfx/map.jpg" alt="Sri Lankan Tourist map">
+        </div>
+        <div class="topics">
+            <div id="student1_topic" onclick="navigate('student1_topic')">
+                <img src="../gfx/galle_2.jpg" alt="Galle">
+                <h5>Galle</h5>
+            </div>
+            <div onclick="navigate('student2_topic')">
+                <img src="../gfx/student2_topic.jpg" alt="Anuradhapura">
+                <h5>Anuradhapura</h5>
+            </div>
+            <div onclick="navigate('student3_topic')">
+                <img src="../gfx/student3_topic.jpg" alt="student3_topic">
+                <h5>student3_topic</h5>
+            </div>
+            <div onclick="navigate('student4_topic')">
+                <img src="../gfx/student4_topic.jpg" alt="student4_topic">
+                <h5>student4_topic</h5>
+            </div>
+        </div>
+        <a href="page_editor_student2.html" style="margin: 50px;">Go to page editor</a>
+
+        <script src="../scripts/home.js"></script>
+    </body>
 </html>
