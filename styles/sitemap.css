@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+rect{
+    fill:#A2D9CE
+}
+
+rect:hover{
+    fill:#148F77;
+    cursor: pointer;
+    border: 10px solid;
+}
+
+text{
+    fill:black;
+    font-size:x-large;
+    font-weight:bold;
+}
+
+
+
+h1{
+    text-align: center;
+    padding:10px;
+    border-radius: 30px;
+    background-color: #148F77;
+    opacity: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 150px;
+    max-width: 250px;
+}
+
+.main{
+    padding-top: 7vh;
+    background-image: url(../gfx/3558308\ \(1\).jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.siteMapDiv {
+    text-align: center;
+}
