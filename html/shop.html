@@ -3,23 +3,41 @@
     <head>
         <title>Shop</title>
         <link rel="icon" href="../gfx/favicon.png">
-        <link rel="stylesheet" href="../styles/buy_products.css" >
+        <link rel="stylesheet" href="../styles/global.css">
+        <link rel="stylesheet" href="../styles/shop.css" >
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Belanosima&family=Inter:wght@100&display=swap" rel="stylesheet">
     </head>
     <body>
-        <iframe src="global_navbar.html?page=shop" width="100%" style="border:none;"></iframe>
+        <iframe src="global_navbar.html?page=shop" width="100%" height="100px" style="border:none;"></iframe>
         <div class = "website-top">
             <h3 class = "website-title">Shopping Products</h3>
-            <div class="cart-btn-div">
-                <img src="../gfx/Shopping_Cart.png">
+            <div class="cart-btn-div" onclick="showcart()">
+                <img src="../gfx/Shopping_Cart.png" >
                 <span class="quantity">0</span>
             </div>
         </div>
+        
         <container class="product-container">
         </container>
-        <script src="../scripts/buy_products.js"></script>
+
+        <div class="cart-container-show">
+            <div class="cart-details">
+                <div class="cart-top">
+                    <h1 class="cart-title">Shopping Cart</h1>
+                    <img src="../gfx/closs_btn.png" onclick="hidecart()">
+                </div>
+                <div class="cart-items-div">
+                    
+                </div>
+                <div class="cart-bottom">
+                    <h2 class="cart-total-price">$ 00.00</h2>
+                    <button class="place-order-btn" onclick="submit()">Place Order</button>
+                </div>
+            </div>
+        </div>
+        <script src="../scripts/shop.js"></script>
 
     </body>
 </html>

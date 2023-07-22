@@ -1,36 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Student Details</title>
   <style>
     
     .details {
       margin-top: 20px;
-
+  
    
     }
-    ul{
-     display: inline-block;
+    ul.li {
+     display: inline;
      padding: 2px;
-     list-style-type: none;
     }
     .member img{
-      width: 80%;
-      height: 80%;
-      float: none;
+      width: 20%;
+      height: 20%;
     }
-    .row{
-      display: flex;
-    }
-    .column{
-      flex: 50%;
-      padding: 35px;
-    }
-    h1,h6{
-      text-align: center;
-    }
-
-    
   </style>
   <script>
     function displayDetails(name, role) {
@@ -40,17 +25,14 @@
       document.getElementById('details').innerHTML = '';
     }
   </script>
- 
 </head>
 <body>
-   <h1>Student Details</h1>
-   <h6>About Us - Hover over the image for details!</h6>
-  <ul class="row">
+  <ul>
   <li class="member" onmouseover="displayDetails('John Doe', 'Student 1')" onmouseout="clearDetails()">
-    <img src="Ben.jpg" alt="Ben Doe">
+    <img src="john.jpg" alt="John Doe">
   </li>
   <li class="member" onmouseover="displayDetails('Jane Smith', 'Student 2')" onmouseout="clearDetails()">
-    <img src="jane.jpg" alt="Jane Smith" width="500" height="600">
+    <img src="jane.jpg" alt="Jane Smith">
   </li>
   <li class="member" onmouseover="displayDetails('Michael Johnson', 'Student 3')" onmouseout="clearDetails()">
     <img src="michael.jpg" alt="Michael Johnson">

@@ -1,0 +1,30 @@
+#blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#blog p {
+    text-align: justify;
+}
+
+#blog ol {
+    text-align: start;
+}
+
+#blog h3 {
+    text-align: left;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.subtopic {
+    width: 50%;
+    height: auto;
+}
