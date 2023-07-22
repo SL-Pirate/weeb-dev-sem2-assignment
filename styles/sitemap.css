@@ -1,7 +1,8 @@
 body{
-    background-image: url(../gfx/sitemap_background.jpg);
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../gfx/sitemap_background.jpg);
+    background-size: contain;
 }
 rect{
     fill:#A2D9CE
@@ -34,9 +35,10 @@ h1{
 }
 
 .main{
+    
     padding-top: 7vh;
-    background-size: contain;
-    background-repeat: no-repeat;
+    
+    
 }
 
 .siteMapDiv {
