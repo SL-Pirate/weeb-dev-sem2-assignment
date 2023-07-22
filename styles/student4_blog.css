@@ -1,0 +1,213 @@
+*{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+p{
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.6vw;
+    font-weight: 700;
+    text-align: justify;
+}
+
+#headtopic{
+    text-align: center;
+    font-family: 'Lumanosimo', 'cursive';
+    margin: auto;
+    font-size: 10vw;
+    padding: 10vw;
+}
+
+h2{
+    font-family: 'Lumanosimo', 'cursive';
+    font-size: 4vw;
+}
+
+
+.links{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.links a{
+    padding: 1vh 2vw;
+    border-radius:30px;
+    color: aliceblue;
+    background-color: rgb(44,44,44);
+    text-decoration: none;
+    transition: padding 0.3s;
+}
+
+.links a:hover{
+    padding: 1.5vh 2.5vw; 
+}
+
+#goToTop{
+    float: right;
+    transition: padding 0.3s;
+    padding: 1vh 2vw;
+    border-radius:30px;
+    background-color:aliceblue;
+    max-width: 10vw;
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+    
+}
+
+
+.goToTop:hover{
+    cursor: pointer;
+}
+
+
+
+.top{
+    padding-bottom: 3vh;
+    background-color: rgb(44, 44, 44);
+}
+
+
+
+
+.topics{
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img{
+    height: 90%;
+    width: 50%;
+    filter: drop-shadow(1px 0px 11px #0000009c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100%;
+    
+}
+
+
+
+
+
+#intro{
+    background-color:  rgb(44, 44, 44);
+    padding: 14vh 0;
+}
+
+#introImg{
+    width: 40%;
+}
+
+#introImg img{
+    width: 100%;
+    height: auto;
+    background-color: rgb(44, 44, 44);;
+}
+
+.introPara{
+    width: 50%;
+    color: aliceblue;
+}
+
+
+
+
+#climate{
+    padding: 21vh 0;
+}
+
+#climateImg{
+    width: 40%;
+}
+
+#climateImg img{
+    width: 100%;
+    height: auto;
+    background-color: rgb(44, 44, 44);
+}
+
+.climatePara{
+    width: 50%;
+    color: rgb(44, 44, 44);
+}
+
+
+
+
+#plants{
+    background-color:  rgb(44, 44, 44);
+    padding: 9vh 0;
+}
+
+#plantsImg{
+    width: 40%;
+}
+
+#plantsImg img{
+    width: 100%;
+    height: auto;
+    background-color: rgb(44, 44, 44);;
+}
+
+.plantsPara{
+    width: 50%;
+    color: aliceblue;
+}
+
+
+
+
+
+#animals{
+    padding: 12vh 0;
+}
+
+#animalsImg{
+    width: 40%;
+}
+
+#animalsImg img{
+    width: 100%;
+    height: auto;
+    background-color: rgb(44, 44, 44);
+}
+
+.animalsPara{
+    width: 50%;
+    color: rgb(44, 44, 44);
+}
+
+
+
+
+
+#travelers{
+    background-color:  rgb(44, 44, 44);
+    padding: 21vh 0;
+}
+
+#travelersImg{
+    width: 40%;
+}
+
+#travelersImg img{
+    width: 100%;
+    height: auto;
+    background-color: rgb(44, 44, 44);
+}
+
+.travelersPara{
+    width: 50%;
+    color: aliceblue;
+}
