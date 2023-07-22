@@ -120,3 +120,21 @@ p{
 a{
     text-decoration: none;
 }
+
+/*------------- Page Editor --------------------*/
+
+.page_editor{
+    font-family:'Manrope', sans-serif ;
+    padding: 10px 20px;
+    margin: 0 20px;
+    background-color: #4e4e4e;
+    border: 2px solid #4e4e4e;
+    color: aliceblue;
+    text-decoration: none;
+    cursor: pointer;
+}
+.page_editor:hover{
+    
+    background-color: aliceblue;
+    color: #4e4e4e;
+}
