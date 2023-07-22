@@ -402,3 +402,22 @@
     right: 2px;
     top:0;
 }
+
+.checkout_popup button{
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: #ccc;
+    font-weight: 700;
+    background-color: #4e4e4e;
+    border:2px solid #4e4e4e;
+    cursor: pointer;
+    transition: all;
+}
+
+.checkout_popup button:hover{
+    border:2px solid #4e4e4e;
+    color: #4e4e4e;
+    background-color: #ccc;
+}
