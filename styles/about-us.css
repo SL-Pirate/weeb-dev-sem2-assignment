@@ -1,0 +1,14 @@
+.details {
+    margin-top: 20px;
+
+ 
+  }
+  #navlist li {
+   display: inline;
+   padding: 2px;
+   list-style-type:none;
+  }
+  .member img{
+    width: 20%;
+    height: 20%;
+  }

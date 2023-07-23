@@ -1,41 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="../styles/about-us.css">
   <link rel="icon" href="../gfx/favicon.png">
   <link rel="stylesheet" href="../styles/global.css">
-  <style>
-    .details {
-      margin-top: 20px;
-    }
-    ul.li {
-     display: inline;
-     padding: 2px;
-    }
-    .member img{
-      width: 20%;
-      height: 20%;
-    }
-  </style>
-  <script>
-    function displayDetails(name, role) {
-      document.getElementById('details').innerHTML = name + ', ' + role;
-    }
-    function clearDetails() {
-      document.getElementById('details').innerHTML = '';
-    }
-  </script>
 </head>
+<title>About Us</title>
 <body>
   <iframe src="global_navbar.html?page=about-us" width="100%" height="100px" style="border:none;"></iframe>
-  <ul>
+  <ul id="navlist">
   <li class="member" onmouseover="displayDetails('John Doe', 'Student 1')" onmouseout="clearDetails()">
-    <img src="../gfx/Ben.jpg" alt="John Doe">
+    <img src="../gfx/student1.png" alt="John Doe">
   </li>
   <li class="member" onmouseover="displayDetails('Isira Herath', 'Student 2')" onmouseout="clearDetails()">
     <img src="../gfx/student2.jpeg" alt="Isira Herath">
   </li>
-  <li class="member" onmouseover="displayDetails('Michael Johnson', 'Student 3')" onmouseout="clearDetails()">
-    <img src="../gfx/Michael.jpg" alt="Michael Johnson">
+  <li class="member" onmouseover="displayDetails('Thusharika', 'Student 3')" onmouseout="clearDetails()">
+    <img src="../gfx/student3.jpeg" alt="Thusharika Sureshkantha">
   </li>
   <li class="member" onmouseover="displayDetails('Sarah Williams', 'Student 4')" onmouseout="clearDetails()">
     <img src="../gfx/sarah.jpg" alt="Sarah Williams">
@@ -43,4 +24,10 @@
   <div id="details" class="details"></div>
   </ul>
 </body>
+<script src="../scripts/about-us.js"></script>
+<div>
+<footer>
+<a href="../html/page_editor_student3.html"><label class="page_editor">Go to Page Editor</label></a>
+</footer>
+</div>
 </html>

@@ -2,3 +2,6 @@ tmp.html
 night_mode.js
 
 .vscode/
+reports/
+
+.~lock*
