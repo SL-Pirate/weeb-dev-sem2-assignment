@@ -38,6 +38,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 10px;
+    margin-bottom: 50px;
 }
 
 .product-items{
@@ -298,9 +299,15 @@
 }
 
 /*----------------------- checkout popup ------------------------*/
-
+.checkout_popup ::-webkit-scrollbar{
+    width: 10px;
+}
+.checkout_popup ::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: #e4e4e4;
+}
 .checkout_popup{
-    background-color: aliceblue;
+    background-color: rgb(141, 141, 141);
     display: none;
     justify-content: center;
     top: 0;
@@ -314,7 +321,7 @@
     padding-bottom: 20%;
 }
 
-.checkout_popup .Personal-Details,.Shipping-Details{
+.checkout_popup .Personal-Details,.Shipping-Details,.Payment-details{
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -325,17 +332,24 @@
     width: 1000px;
     margin: 10px;
     transition: display 2s;
-
+}
+.checkout-order-details{
+    background-color: rgba(235, 235, 235, 0.932);
+    filter: drop-shadow(0px 0px 2px #15081fea);
+    border-radius:20px ;
+    margin: 10px;
+    padding: 10px;
 }
 
 .Personal-Details{
     margin-bottom: 20px;
 }
 
-.checkout_popup .Personal-Details-form,.Shipping-Details-form{
-    width: 80%;
+.Personal-Details-form,.Shipping-Details-form,.Payment-Details-form{
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     transition: display 2s;
 }
@@ -381,7 +395,8 @@
     border-radius: 5px;
     background: #00000059;
     border:0px;
-    border-bottom: 2px solid #ccc;
+    border: 2px solid transparent;
+    border-bottom: 2px solid #4e4e4e;
     padding-left: 15px;
     font-size: 13px;
     border-bottom-width: 2px;
@@ -393,12 +408,103 @@
     border: 2px solid #4e4e4e;
     transition: all 0.3s ease;
 }
-.checkout_popup .Shipping-Details ,.Personal-Details{
-    position: relative;
+.checkout_popup .input-box input:valid{
+    background: #01be21e2;
+    border: 2px solid #007523;
 }
+
+/* .checkout_popup .Shipping-Details ,.Personal-Details{
+    position: relative;
+} */
+
 .checkout_popup .drop-down-arrow{
     position: absolute;
     transform:rotate(179deg);
     right: 2px;
     top:0;
+}
+.payment-options{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.payment-options img{
+    height: 40px;
+    width: auto;
+    margin-right:20px ;
+}
+.checkout_popup button{
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: #ccc;
+    font-weight: 700;
+    background-color: #4e4e4e;
+    border:2px solid #4e4e4e;
+    cursor: pointer;
+    transition: all;
+}
+
+.checkout_popup button:hover{
+    border:2px solid #4e4e4e;
+    color: #4e4e4e;
+    background-color: #ccc;
+}
+
+
+/*------------------------ Page Editor -------------------------*/
+a {
+    text-decoration: none;
+}
+.page_editor{
+    padding: 10px 20px;
+    margin: 0 20px;
+    background-color: #4e4e4e;
+    border: 2px solid #4e4e4e;
+    color: aliceblue;
+    text-decoration: none;
+    cursor: pointer;
+}
+.page_editor:hover{
+    background-color: aliceblue;
+    color: #4e4e4e;
+}
+
+/*----------------- Thank you popup -----------------------*/
+.thank-you-popup{
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: aliceblue;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.popup-message{
+    width: 30%;
+    height: 40%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #a8a8a8;
+    color: rgba(0, 0, 0, 0.694);
+    text-align: center;
+    font-family:'Belanosima', sans-serif ;
+}
+
+.popup-message button{
+    margin-top: 30px;
+    padding: 10px 20px;
+    outline: none;
+    border: 2px solid #4e4e4e;
+    background-color: #4e4e4e;
+    color: #dfdfdf;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+
 }
