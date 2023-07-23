@@ -68,9 +68,13 @@ h2{
 
 
 
-.top{
+.end{
     padding-bottom: 3vh;
     background-color: rgb(44, 44, 44);
+}
+
+#pageEditor{
+    padding: 20px;
 }
 
 

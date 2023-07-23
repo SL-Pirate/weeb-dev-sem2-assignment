@@ -1,0 +1,32 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color: aliceblue;
+    background-color: #444444;
+    padding: 1vh 3vw;
+    border-radius: 30px;
+    margin:auto;
+    font-size: 5vw;
+}
+
+div{
+    padding: 1vh;
+    border: 3px solid #444444;
+    border-radius: 20px;
+    margin: 2vh 4vw;
+}
+
+a{
+    color: aliceblue;
+    font-size:small;
+    padding: 0.3vh 2vw;
+    border-radius: 20px;
+    background-color: #444444;
+    opacity: 80%;
+    text-decoration: none;
+}
