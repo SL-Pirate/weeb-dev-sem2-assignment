@@ -1,0 +1,115 @@
+*{
+  scroll-behavior: smooth; 
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.menu-title{
+    font-family: 'Lumanosimo', 'cursive';
+    padding: 80px 0px;
+}
+
+
+.menu ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    list-style-type: none;
+}
+
+.menu ol li{
+    flex: 15%;
+    font-size: larger;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color:  rgba(7, 0, 0, 0.879);
+    transition: all 0.3s;
+}
+.menu ol li:hover{
+    padding: 5px 20px;
+}
+.intro-div{
+    background-color:  rgb(14, 12, 12);
+    padding: 20px 0 20px 0;
+}
+#intro-img-div{
+    width: 50%;
+    float: right;
+} 
+#intro-img-div img{
+    width: 100%;
+    height: auto;
+}
+#intro{
+    width: 50%;
+    color: aliceblue;
+}
+
+#history-img-div{
+    width: 50%;
+    float: right;
+}
+#history-img-div img{
+    width: 100%;
+    height: auto;
+}
+.history{
+    width: 40%;
+}
+
+.features-div{
+    background-color:  rgb(14, 12, 12);
+    padding: 20px 0 20px 0;
+}
+#features-img-div{
+    width: 20%;
+    height: 20%;
+    float: left;
+}
+#features{
+    width: 60%;
+    color: aliceblue;
+}
+
+#traveler-img-div{
+    width: 40%;
+    float: left;
+}
+
+.traveler-details{
+    width: 50%;
+}
+h1{
+    font-family: 'Lumanosimo', 'cursive';
+    margin: auto;
+    font-size: 150px;
+    padding: 150px;  
+    text-align: center;
+    font-weight: bold;
+}
+img{
+    width: 30%;
+    height: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+h2{
+    font-family: 'Lumanosimo', 'cursive';
+    font-size: 50px;
+}
+h3{
+    font-family: 'Lumanosimo', 'cursive';
+    font-size: 30px; 
+}
+p.block{
+    font: 2em sans-serif;
+}
+
