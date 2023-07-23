@@ -48,7 +48,7 @@ const quizData = [
       question:"What is the significance of the Mirror Wall at Sigiriya Lions Rock?",
       options:[ "It was used to reflect the surrounding natural scenery for the enjoyment of the king."," It was a defensive barrier built to protect the Sigiriya fortress from invaders."," It was a wall where the ancient king would perform rituals and ceremonies.","It was polished so heavily that the king could see his reflection, and visitors left inscriptions on it dating back to the 8th century."],
       answer:"It was polished so heavily that the king could see his reflection, and visitors left inscriptions on it dating back to the 8th century."
-    },
+    }
   ];
   
   const questionEl = document.getElementById('question');
@@ -100,24 +100,35 @@ const quizData = [
     }
   }
   
+  let isOver = false;
   function showResults() {
-    questionEl.textContent = `You scored ${score} out of ${quizData.length} questions.`;
-    optionsEl.innerHTML = '';
-    submitBtn.style.display = 'none';
+    if (!isOver) {
+      questionEl.textContent = `You scored ${score} out of ${quizData.length} questions.`;
+      optionsEl.innerHTML = '';
+      submitBtn.style.display = 'none';
+      
+      showPerformanceDetails();
+      isOver = true;
+    }
   }
   
   loadQuestion();
   submitBtn.addEventListener('click', submitAnswer);
   
+  let timerValue = 0;
+  let totalTime = 0;
   function startCountdown(duration) {
+    timerValue = duration;
+    totalTime = duration;
     let timerDisplay = document.getElementById('countdown');
-    let timerValue = duration;
 
     let timer = setInterval(function() {
       if (timerValue <= 0) {
         clearInterval(timer);
-        document.getElementById('quiz-container').innerHTML = '<h2>Time is up!</h2>';
-        showPerformanceDetails();
+        if (!isOver) {
+          document.getElementById('quiz-container').innerHTML = '<h2>Time is up!</h2>';
+        }
+        showResults();
       } else {
         let minutes = Math.floor(timerValue / 60);
         let seconds = timerValue % 60;
@@ -130,11 +141,13 @@ const quizData = [
   
   function showPerformanceDetails() {
     let performanceDetails = document.getElementById('performance-details');
-    let questionCount = 10;
-    let correctAnswers = calculateScore(userAnswers);
+    let questionCount = quizData.length;
+    let correctAnswers = score;
     let wrongAnswers = questionCount-correctAnswers;
     let gradePercentage = (correctAnswers / questionCount) * 100;
-    let timeTaken = calculateTimeTaken();
+    let timeTaken = totalTime - timerValue;
+    console.log(timeTaken);
+    timerValue = 0;
 
     document.getElementById('question-count').innerText = 'Total Questions: ' + questionCount;
     document.getElementById('correct-answers').innerText = 'Correct Answers: ' + correctAnswers;
@@ -147,5 +160,5 @@ const quizData = [
 
 
   window.onload = function() {
-    startCountdown(60);
+    startCountdown(quizData.length * 10);
   };
