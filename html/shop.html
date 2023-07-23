@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Shop</title>
         <link rel="icon" href="../gfx/favicon.png">
@@ -10,23 +10,23 @@
         <link href="https://fonts.googleapis.com/css2?family=Belanosima&family=Inter:wght@100&display=swap" rel="stylesheet">
     </head>
     <body>
-        <iframe src="global_navbar.html?page=shop" width="100%" height="100px" style="border:none;"></iframe>
+        <iframe src="global_navbar.html?page=shop" width="1225" height="100" style="border:none;"></iframe>
         <div class = "website-top">
             <h3 class = "website-title">Shopping Products</h3>
             <div class="cart-btn-div" onclick="showcart()">
-                <img src="../gfx/Shopping_Cart.png" >
+                <img src="../gfx/Shopping_Cart.png" alt="Shopping Cart">
                 <span class="quantity">0</span>
             </div>
         </div>
         
-        <container class="product-container">
-        </container>
-        <a href="../html/page_editor_student1.html"><label class="page_editor">Go to Page Editor</label></a>
+        <div class="product-container">
+        </div>
+        <label class="page_editor"><a href="../html/page_editor_student1.html">Go to Page Editor</a></label>
         <div class="cart-container-show">
             <div class="cart-details">
                 <div class="cart-top">
                     <h1 class="cart-title">Shopping Cart</h1>
-                    <img src="../gfx/closs_btn.png" onclick="hidecart()">
+                    <img src="../gfx/closs_btn.png" onclick="hidecart()" alt="close">
                 </div>
                 <div class="cart-items-div">
                     
@@ -42,7 +42,7 @@
             <div class="form-container">
                 <div class="checkout-order-details">
                     <h1 class="checkout-title">Order Summery</h1>
-                    <h2 class="checkout-total"></h2>
+                    <h2 class="checkout-total">Rs 00.00</h2>
                     <h2 class="payment-method">Payment-Method :- Cash on Delivery</h2>
                 </div>
                 <form method="post" onsubmit="thankyouShow()" action="javascript:void(0);" >
@@ -54,20 +54,20 @@
                         <div class="Personal-Details-form">
                             <fieldset>
                                 <div class="input-box">
-                                    <span class="details" for="#first-name">First Name</span>
+                                    <label class="details" for="first-name">First Name</label>
                                     <input id="first-name" type="text" placeholder="Enter Your First Name" required>
                                 </div>
                                 <div class="input-box">
-                                    <span class="details" for="#last-name">Last Name</span>
+                                    <label class="details" for="last-name">Last Name</label>
                                     <input id="last-name" type="text" placeholder="Enter Your Last Name" required>
                                 </div>
                                 <div class="input-box">
-                                    <span class="details" for="#tel">Phone Number</span>
+                                    <label class="details" for="tel">Phone Number</label>
                                     <input id="tel" type="tel" minlength="10" maxlength='10' placeholder="Enter Your Phone Name" required>
                                 </div>
                                 <div class="input-box">
-                                    <span class="details" for="#email">Email</span>
-                                    <input id="email" type="mail" placeholder="Enter Your Email Address" required>
+                                    <label class="details" for="email">Email</label>
+                                    <input id="email" type="text" placeholder="Enter Your Email Address" required>
                                 </div>
                             </fieldset>
                         </div>
@@ -80,20 +80,20 @@
                         <div class="Shipping-Details-form">
                             <fieldset>
                                 <div class="input-box">
-                                    <span class="details" for="#address">Address</span>
+                                    <label class="details" for="address">Address</label>
                                     <input id="address" type="text" placeholder="Enter Address" required>
                                 </div>
                                 <div class="input-box">
-                                    <span class="details" for="#town">Town/City</span>
+                                    <label class="details" for="town">Town/City</label>
                                     <input id="town" type="text" placeholder="Enter Town or City" required>
                                 </div>
                                 <div class="input-box">
-                                    <span class="details" for="#postal">Postal Code</span>
+                                    <label class="details" for="postal">Postal Code</label>
                                     <input id="postal" type="text" placeholder="Enter Postal Code" required>
                                 </div>
                                 <div class="input-box">
-                                    <span class="details" for="#country">Country</span>
-                                    <input id="country" type="textbox" placeholder="Enter Country" required>
+                                    <label class="details" for="country">Country</label>
+                                    <input id="country" type="text" placeholder="Enter Country" required>
                                 </div>
                             </fieldset>
                         </div>
@@ -107,27 +107,27 @@
                             <div class="payment-options">
                                 <h3>Accepted Cards</h3>
                                 <div class="option-images">
-                                    <img src="../gfx/MasterCard_Logo.svg.png">
-                                    <img src="../gfx/American-Express-Logo-Transparent-PNG.png">
-                                    <img src="../gfx/Visa-Logo-2014.png">
+                                    <img src="../gfx/MasterCard_Logo.svg.png" alt="Master Card">
+                                    <img src="../gfx/American-Express-Logo-Transparent-PNG.png" alt="American Express">
+                                    <img src="../gfx/Visa-Logo-2014.png" alt="Visa">
                                 </div>
                             </div>
                             <div class="Payment-Details-area">
                                 <fieldset>
                                     <div class="input-box">
-                                        <span class="details" for="#name-on-card">Name on Card</span>
+                                        <label class="details" for="name-on-card">Name on Card</label>
                                         <input id="name-on-card" type="text" placeholder="Name" required>
                                     </div>
                                     <div class="input-box">
-                                        <span class="details" for="#card-number">Card Number</span>
+                                        <label class="details" for="card-number">Card Number</label>
                                         <input id="card-number" type="text" placeholder="1111 2222 3333 4444" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" required>
                                     </div>
                                     <div class="input-box">
-                                        <span class="details" for="#exp-month">Exp Month</span>
-                                        <input id="exp-month" type="text" placeholder="month" onfocus="(this.type='month')" onblur="(this.type='text')"required>
+                                        <label class="details" for="exp-month">Exp Month</label>
+                                        <input id="exp-month" type="text" placeholder="month" onfocus="(this.type='month')" onblur="(this.type='text')" required>
                                     </div>
                                     <div class="input-box">
-                                        <span class="details" for="#cvv">CVV</span>
+                                        <label class="details" for="cvv">CVV</label>
                                         <input id="cvv" type="text" minlength="3" maxlength='3' required>
                                     </div>
                                 </fieldset>
