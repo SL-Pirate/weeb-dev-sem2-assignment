@@ -1,21 +1,99 @@
 *{
   scroll-behavior: smooth; 
 }
+
+h1{
+    font-family: 'Lumanosimo', 'cursive';
+    margin: auto;
+    font-size: 150px;
+    padding: 150px;  
+    text-align: center;
+    font-weight: bold;
+}
 .menu{
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    text-align: center;
-    margin-left: 50px;
-    margin-right: 50px;
+}
+.menu a{
+    text-decoration: none;
+    margin: 20px 5px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #4e4e4e;
+    color: aliceblue;
+    transition: all 0.3s;
+}
+.menu a:hover{
+    padding: 10px 25px;
 }
 .menu-title{
     font-family: 'Lumanosimo', 'cursive';
     padding: 80px 0px;
 }
 
+.article-container{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
 
-.menu ol {
+img{
+    border-radius: 20px ;
+}
+/*---------------------------------------------*/
+.intro-div , .traveler-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 10px 20px;
+}
+.intro-div .image-div , .traveler-div .image-div{
+    width: 40%;
+    overflow: hidden;
+}
+.intro-div .detail-div , .traveler-div .detail-div{
+    width: 60%;
+}
+.intro-div .image-div img , .traveler-div .image-div img{
+    width: 90%;
+}
+/*-------------------------------------------*/
+.history-div ,.features-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    height: 100vh;
+}
+.history-div .image-div , .features-div .image-div{
+    width: 50%;
+    overflow: hidden;
+}
+.history-div .image-div img,.features-div .image-div img{
+    width: 100%;
+    margin: 0;
+}
+.history-div .detail-div , .features-div .detail-div{
+    text-align: center;
+}
+/*----------------------------------------------*/
+.intro-div , .features-div{
+    background-color: #4e4e4e;
+}
+
+.intro-div .detail-div ,.features-div .detail-div{
+    color: aliceblue;
+}
+.features-div{
+   height: 150vh;
+}
+.features-div p{
+    text-align: justify;
+}
+
+/* .menu ol {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -111,5 +189,5 @@ h3{
 }
 p.block{
     font: 2em sans-serif;
-}
+} */
 
