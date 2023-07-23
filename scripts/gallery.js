@@ -11,7 +11,9 @@ for(i=0; i<backButton.length; i++){
 
 function changeColor(){
     let colorValue = document.getElementById('bgColor').value;
-    let content = document.getElementById('content');
+    // let content = document.getElementById('content');
+    // changin color of the whole body
+    let content = document.body;
     let description = document.getElementsByClassName('description');
 
     content.style.backgroundColor = colorValue;
