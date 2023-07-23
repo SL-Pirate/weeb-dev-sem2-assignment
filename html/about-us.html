@@ -17,6 +17,8 @@
       height: 20%;
     }
   </style>
+  <link rel="icon" href="../gfx/favicon.png">
+  <link rel="stylesheet" href="../styles/global.css">
   <script>
     function displayDetails(name, role) {
       document.getElementById('details').innerHTML = name + ', ' + role;
@@ -27,6 +29,7 @@
   </script>
 </head>
 <body>
+  <iframe src="global_navbar.html?page=about-us" width="100%" height="100px" style="border:none;"></iframe>
   <ul>
   <li class="member" onmouseover="displayDetails('John Doe', 'Student 1')" onmouseout="clearDetails()">
     <img src="../gfx/john.jpg" alt="John Doe">
