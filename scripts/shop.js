@@ -28,6 +28,12 @@ let Products = [
         quantity:0
     },
     {
+        name:"Gold Palated SriLanka Map Pendant",
+        price:300.00,
+        image:"gold_plated_sri_lankan_pendant.png",
+        quantity:0
+    },
+    {
         name:"Sigiriya - Hand Made Stone Statue",
         price:900.00,
         image:"Sigiriya_Stone_Statue.jpg",
@@ -52,9 +58,45 @@ let Products = [
         quantity:0
     },
     {
+        name:"Burnt Brass Wall Hanging",
+        price:1000.00,
+        image:"burnt_brass_wall_hanging.png",
+        quantity:0
+    },
+    {
+        name:"Burnt Brass Lamp Shade",
+        price:2500.00,
+        image:"burnt_brass_lamp_shade.png",
+        quantity:0
+    },
+    {
+        name:"Hand Made Elephant Design Mug",
+        price:600.00,
+        image:"handmade_elephant_design_mug.png",
+        quantity:0
+    },
+    {
         name:"Wooden Handmade Sri Lankan Elephant",
         price:3000.00,
         image:"Wooden-Elephant.jpg",
+        quantity:0
+    },
+    {
+        name:"Wooden Jewelary Box",
+        price:800.00,
+        image:"jewelary_box.png",
+        quantity:0
+    },
+    {
+        name:"Hand Made Coconut Shells Wooden Spoons",
+        price:200.00,
+        image:"Handmade Coconut Shells Wooden Spoons.png",
+        quantity:0
+    },
+    {
+        name:"Sri Lanka Travel Poater",
+        price:1000.00,
+        image:"Travel_poster_of_srilanka.png",
         quantity:0
     }
 ]
@@ -180,8 +222,10 @@ function submit(){
 
 let personalFormDetails = document.querySelector('.Personal-Details-form');
 let shippingFormDetails = document.querySelector('.Shipping-Details-form');
+let paymentFormDetails = document.querySelector('.Payment-Details-form');
 let dropArrowone = document.querySelector('#drop-down-arrow-one');
 let dropArrowtwo = document.querySelector('#drop-down-arrow-two');
+let dropArrowthree = document.querySelector('#drop-down-arrow-three');
 
 function displayPersonalForm(){
     if(personalFormDetails.style.display =='none'){
@@ -202,4 +246,25 @@ function displayShippingForm(){
         dropArrowtwo.style.transform = 'rotate(0deg)';
         shippingFormDetails.style.display = 'none';
     }  
+}
+
+function displayPaymentForm(){
+    if(paymentFormDetails.style.display =='none'){
+        dropArrowthree.style.transform = 'rotate(180deg)';
+        paymentFormDetails.style.display = 'flex';
+    }else{
+        dropArrowthree.style.transform = 'rotate(0deg)';
+        paymentFormDetails.style.display = 'none';
+    }
+}
+
+//----------------------- Thank you Popup ---------------------
+
+function thankyouShow(){
+    document.querySelector('.thank-you-popup').style.display = 'flex';
+    document.querySelector('.checkout_popup').style.display = 'none';
+}
+
+function reloadshop(){
+
 }

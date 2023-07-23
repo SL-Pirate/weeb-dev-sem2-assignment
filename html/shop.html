@@ -21,7 +21,7 @@
         
         <container class="product-container">
         </container>
-
+        <a href="../html/page_editor_student1.html"><label class="page_editor">Go to Page Editor</label></a>
         <div class="cart-container-show">
             <div class="cart-details">
                 <div class="cart-top">
@@ -33,7 +33,7 @@
                 </div>
                 <div class="cart-bottom">
                     <h2 class="cart-total-price">$ 00.00</h2>
-                    <button class="place-order-btn" onclick="submit()">Place Order</button>
+                    <button class="place-order-btn" onclick="submit()">Proceed</button>
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@
                     <h2 class="checkout-total"></h2>
                     <h2 class="payment-method">Payment-Method :- Cash on Delivery</h2>
                 </div>
-                <form>
+                <form method="post" onsubmit="thankyouShow()" action="javascript:void(0);" >
                     <div class="Personal-Details">
                         <div class="Personal-Details-Title" >
                             <h1 onclick="displayPersonalForm()">Personal Details</h1>
@@ -63,7 +63,7 @@
                                 </div>
                                 <div class="input-box">
                                     <span class="details" for="#tel">Phone Number</span>
-                                    <input id="tel" type="text" placeholder="Enter Your Phone Name" required>
+                                    <input id="tel" type="tel" minlength="10" maxlength='10' placeholder="Enter Your Phone Name" required>
                                 </div>
                                 <div class="input-box">
                                     <span class="details" for="#email">Email</span>
@@ -98,9 +98,54 @@
                             </fieldset>
                         </div>
                     </div>
-                    
+                    <div class="Payment-details">
+                        <div class="Payment-details-title">
+                            <h1 onclick="displayPaymentForm()">Payment Details</h1>
+                            <img src="../gfx/drop_down_arrow.png" alt="drop down" class="drop-down-arrow" id="drop-down-arrow-three" onclick="displayPaymentForm()">
+                        </div>
+                        <div class="Payment-Details-form">
+                            <div class="payment-options">
+                                <h3>Accepted Cards</h3>
+                                <div class="option-images">
+                                    <img src="../gfx/MasterCard_Logo.svg.png">
+                                    <img src="../gfx/American-Express-Logo-Transparent-PNG.png">
+                                    <img src="../gfx/Visa-Logo-2014.png">
+                                </div>
+                            </div>
+                            <div class="Payment-Details-area">
+                                <fieldset>
+                                    <div class="input-box">
+                                        <span class="details" for="#name-on-card">Name on Card</span>
+                                        <input id="name-on-card" type="text" placeholder="Name" required>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details" for="#card-number">Card Number</span>
+                                        <input id="card-number" type="text" placeholder="1111 2222 3333 4444" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" required>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details" for="#exp-month">Exp Month</span>
+                                        <input id="exp-month" type="text" placeholder="month" onfocus="(this.type='month')" onblur="(this.type='text')"required>
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details" for="#cvv">CVV</span>
+                                        <input id="cvv" type="text" minlength="3" maxlength='3' required>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <button type="reset">Reset</button>
+                    <button type="submit" >Place Order</button>
                 </form>
             </div> 
+        </div>
+        <div class="thank-you-popup">
+            <div class="popup-message">
+                <h1>Thank You</h1>
+                <h2>for Shopping with us</h2>
+                <button onclick="window.location.reload();">Exit</button>
+            </div>
         </div>
         <script src="../scripts/shop.js"></script>
     </body>
