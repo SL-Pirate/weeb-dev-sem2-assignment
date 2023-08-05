@@ -1,3 +1,7 @@
+// string key constants for saving into local storage
+const galleryBackgroundColor = "gallery_background_color";
+const galleryFontSize = "gallery_font_size";
+
 let colorChangeInput = document.getElementById('bgColor');
 colorChangeInput.addEventListener('change', changeColor);
 
@@ -10,7 +14,8 @@ for(i=0; i<backButton.length; i++){
 }
 
 function changeColor(){
-    let colorValue = document.getElementById('bgColor').value;
+    let colorValue = colorChangeInput.value;
+    saveToLocalStorage();
     let content = document.body;
     let description = document.getElementsByClassName('description');
 
@@ -21,8 +26,25 @@ function changeColor(){
     }
 }
 
+function saveToLocalStorage() {
+    // saving current value to local storage
+    localStorage.setItem(galleryBackgroundColor, colorChangeInput.value);
+    localStorage.setItem(galleryFontSize, fontChangeInput.value);
+}
+
+function loadFromLocalStorage() {
+    if (localStorage.getItem(galleryBackgroundColor) != null) {
+        colorChangeInput.value = localStorage.getItem(galleryBackgroundColor);
+        fontChangeInput.value = localStorage.getItem(galleryFontSize);
+        changeColor();
+        changeFont();
+    }
+}
+
+
 function changeFont(){
-    let fontSize = document.getElementById('fontSize').value;
+    let fontSize = fontChangeInput.value;
+    saveToLocalStorage()
     let content = document.getElementById('content');
     let description = document.getElementsByClassName('description');
 
@@ -74,3 +96,5 @@ function closePopUp(){
         descriptions[i].style.visibility = 'hidden';
     }
 }
+
+loadFromLocalStorage();
