@@ -1,14 +1,39 @@
-.details {
-    margin-top: 20px;
 
- 
+.details {
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
+    /* background-color: rgba(61, 61, 61, 0.541); */
+    color: aliceblue;
+    padding: 20px ;
+  }
+
+
+  #navlist {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
   #navlist li {
    display: inline;
    padding: 2px;
    list-style-type:none;
   }
+
+
   .member img{
-    width: 20%;
-    height: 20%;
+    width: auto;
+    height:250px;
+    border-radius: 10px;
+    transition: all 0.3s;
+  }
+
+  .member img:hover{
+    height: 275px;
+    filter: drop-shadow(0px 0px 2px #15081fea);
+  }
+
+  .page-editor{
+    position:fixed;
+    bottom: 20px;
   }
